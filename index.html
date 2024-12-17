@@ -9,61 +9,42 @@
     <meta name="keywords" content="flash usdt, prank tool, ethereum, crypto prank, trust wallet, rainbow wallet, blockchain, 10x multiplier, prank crypto, FlashUSDT, usdt-flashing-software, flash-usdt-working, flash-usdt-software-download, usdt-flashing-tool, usdt-flash-sender, flash-usdt-tokens, flash-usdt-sender-v2, usdt-flasher-2024, usdt-flashing-tool-2024, usdt-flash-binance, usdt-flash-wallet, usdt-flash-generator, fake-usdt-software, fake-usdt-trc20, fake-usdt-erc20">
     <meta name="description" content="A tool to send fake USDT with a 10x multiplier, confirmed for 90 days. Connect your wallet and prank your friends with crypto!">
 
-    <!-- Open Graph Meta Tags (for Social Media Sharing) -->
     <meta property="og:title" content="Flash USDT Sender - Crypto Prank Tool">
     <meta property="og:description" content="Send fake USDT with a 10x multiplier, confirmed for 90 days. Connect with Rainbow Wallet or Trust Wallet and prank your friends!">
     <meta property="og:image" content="https://flashusdtsenderbot.github.io/images/preview-image.png">
     <meta property="og:url" content="https://flashusdtsenderbot.github.io">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:keywords" content="usdt-flashing-software, flash-usdt-working, flash-usdt-software-download, usdt-flashing-tool, usdt-flash-sender, flash-usdt-tokens, flash-usdt-sender-v2, usdt-flasher-2024, usdt-flashing-tool-2024, usdt-flash-binance, usdt-flash-wallet, usdt-flash-generator, fake-usdt-software, fake-usdt-trc20, fake-usdt-erc20, flash-usdt-erc20, flash-usdt-bep20, flash-usdt-trc20, usdt-flashing, usdt-flashing-tool-2024, usdt-flash-sender">
 
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@your_twitter_handle">
     <meta name="twitter:title" content="Flash USDT Sender - Crypto Prank Tool">
     <meta name="twitter:description" content="Send fake USDT with a 10x multiplier, confirmed for 90 days. Prank your friends with this fun crypto tool!">
     <meta name="twitter:image" content="https://flashusdtsenderbot.github.io/images/preview-image.png">
 
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Flash USDT Sender",
-        "url": "https://flashusdtsenderbot.github.io",
-        "description": "A tool to prank your friends by sending fake USDT with a 10x multiplier. Confirmed for 90 days. Connect your wallet and have fun!",
-        "publisher": {
-            "@type": "Organization",
-            "name": "Flash USDT SenderBot Team",
-            "logo": "https://flashusdtsenderbot.github.io/images/logo.png"
-        },
-        "image": "https://flashusdtsenderbot.github.io/images/preview-image.png"
-    }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.0.umd.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <!-- Favicon -->
-    <link rel="icon" href="https://flashusdtsenderbot.github.io/images/favicon.ico" type="image/x-icon">
-
-    <title>Flash USDT Sender - Prank with Fake USDT | 10x Multiplier & 90 Days Confirmed</title>
-
-    <link rel="canonical" href="https://flashusdtsenderbot.github.io">
-
-    <!-- Tailwind CSS for modern UI design -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
+        :root {
+            --gradient-start: #1f1f1f;
+            --gradient-end: #333333;
+            --button-hover: #4CAF50;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #1b1b1b;
+            background-color: #181818;
             color: #fff;
             margin: 0;
         }
 
         header {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
             padding: 20px 0;
             text-align: center;
-            color: white;
         }
 
         nav ul {
@@ -82,13 +63,19 @@
             text-decoration: none;
             color: white;
             font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
         }
 
         #hero {
-            background: #007bff;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
             color: white;
             padding: 80px 20px;
             text-align: center;
+            border-radius: 10px;
         }
 
         .container {
@@ -96,9 +83,13 @@
             margin: 0 auto;
         }
 
-        #how-to-use {
-            background: #fff;
-            padding: 50px 20px;
+        .glass-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
         footer {
@@ -109,9 +100,10 @@
         }
 
         .form-container {
-            background-color: #1b1b1b;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
             padding: 30px;
-            border-radius: 8px;
+            border-radius: 10px;
         }
 
         .form-group {
@@ -127,6 +119,13 @@
             border: 1px solid #444;
             color: white;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            background-color: #444;
+            border-color: #4CAF50;
         }
 
         button {
@@ -137,19 +136,37 @@
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4CAF50;
         }
 
         button:disabled {
-            background-color: #ccc;
+            background-color: #666;
+            cursor: not-allowed;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
+
+    <title>Flash USDT Sender - Prank with Fake USDT | 10x Multiplier & 90 Days Confirmed</title>
 </head>
+
 <body>
 
     <header>
-        <div class="logo">
-            <img src="https://flashusdtsenderbot.github.io/images/logo.png" alt="Flash USDT Logo" width="120">
-        </div>
+        <h1 class="text-4xl text-white font-bold">Flash USDT Sender</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -161,23 +178,23 @@
 
     <section id="hero">
         <div class="container">
-            <h1>Flash USDT Sender</h1>
-            <p>Send fake USDT with a 10x multiplier, confirmed for 90 days. Prank your friends with crypto!</p>
-            <button id="connect-wallet">Connect Wallet</button>
+            <h2 class="text-3xl font-semibold">Prank Your Friends with Fake USDT!</h2>
+            <p class="mt-4 text-xl">Send fake USDT with a 10x multiplier, confirmed for 90 days. Connect your wallet and prank away!</p>
+            <button id="connect-wallet" class="mt-6">Connect Wallet</button>
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="glass-card">
         <div class="container">
-            <h2>About Flash USDT Sender</h2>
-            <p>Flash USDT Sender is a fun tool that lets you prank your friends by sending fake USDT with a 10x multiplier. The transactions are confirmed for 90 days, giving you plenty of time to prank your friends and family!</p>
+            <h2 class="text-2xl font-semibold">About Flash USDT Sender</h2>
+            <p class="mt-4">Flash USDT Sender is a tool to prank your friends and family by sending fake USDT with a 10x multiplier, which stays confirmed for 90 days. The tool is easy to use and works with popular wallets like Rainbow and Trust Wallet.</p>
         </div>
     </section>
 
-    <section id="how-to-use">
-        <div class="container">
-            <h2>How To Use</h2>
-            <ul>
+    <section id="how-to-use" class="container">
+        <h2 class="text-2xl font-semibold">How To Use</h2>
+        <div class="glass-card">
+            <ul class="list-disc pl-5 mt-4">
                 <li>Connect your wallet (Rainbow or Trust Wallet)</li>
                 <li>Enter the amount of USDT you want to flash</li>
                 <li>Click "Flash USDT" to prank your friends!</li>
@@ -185,32 +202,29 @@
         </div>
     </section>
 
-    <section id="dapp">
-        <div class="container">
-            <h2>Flash USDT Prank Tool</h2>
-            <div class="form-container">
-                <div class="form-group">
-                    <label for="amount">Enter Amount of USDT:</label>
-                    <input type="number" id="amount" placeholder="Amount of USDT" min="1">
-                </div>
-                <div class="form-group">
-                    <label for="wallet">Select Your Wallet:</label>
-                    <select id="wallet">
-                        <option value="rainbow">Rainbow Wallet</option>
-                        <option value="trust">Trust Wallet</option>
-                    </select>
-                </div>
-                <button id="flash-usdt-btn" disabled>Flash USDT</button>
+    <section id="dapp" class="container">
+        <h2 class="text-2xl font-semibold">Flash USDT Prank Tool</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="amount" class="text-white">Enter Amount of USDT:</label>
+                <input type="number" id="amount" placeholder="Amount of USDT" min="1">
             </div>
+            <div class="form-group">
+                <label for="wallet" class="text-white">Select Your Wallet:</label>
+                <select id="wallet">
+                    <option value="rainbow">Rainbow Wallet</option>
+                    <option value="trust">Trust Wallet</option>
+                </select>
+            </div>
+            <button id="flash-usdt-btn" disabled>Flash USDT</button>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Flash USDT SenderBot Team</p>
-        <p>Follow us on <a href="https://t.me/FlashUSDTSenderBot" target="_blank" style="color:white;">Telegram</a></p>
+        <p>Follow us on <a href="https://t.me/FlashUSDTSenderBot" target="_blank" class="text-green-400">Telegram</a></p>
     </footer>
 
-    <!-- JavaScript for Wallet Connection and Form Handling -->
     <script>
         const connectBtn = document.getElementById('connect-wallet');
         const flashBtn = document.getElementById('flash-usdt-btn');
@@ -219,7 +233,7 @@
 
         connectBtn.addEventListener('click', () => {
             // Logic to connect wallet (this is a placeholder)
-            alert('Wallet connected!');
+            alert('Wallet connected! 🎉');
             connectBtn.disabled = true;
             flashBtn.disabled = false;
         });
@@ -229,9 +243,9 @@
             const wallet = walletSelect.value;
 
             if (amount > 0) {
-                alert(`Flashing ${amount} fake USDT to ${wallet}...`);
+                alert(`Flashing ${amount} fake USDT to ${wallet}... 😎`);
             } else {
-                alert('Please enter a valid amount.');
+                alert('Please enter a valid amount. ⚠️');
             }
         });
     </script>
