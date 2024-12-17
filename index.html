@@ -45,53 +45,49 @@
     <!-- Favicon -->
     <link rel="icon" href="https://flashusdtsenderbot.github.io/images/favicon.ico" type="image/x-icon">
 
-    <!-- Title Tag -->
     <title>Flash USDT Sender - Prank with Fake USDT | 10x Multiplier & 90 Days Confirmed</title>
 
-    <!-- Canonical Link -->
     <link rel="canonical" href="https://flashusdtsenderbot.github.io">
 
-    <!-- CSS -->
+    <!-- Tailwind CSS for modern UI design -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #1b1b1b;
+            color: #fff;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
 
         header {
-            background: #333;
-            color: white;
-            padding: 10px 0;
+            background-color: #333;
+            padding: 20px 0;
             text-align: center;
-        }
-
-        header .logo img {
-            width: 100px;
+            color: white;
         }
 
         nav ul {
             list-style-type: none;
-            margin: 0;
             padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline;
             margin-right: 20px;
         }
 
         nav ul li a {
-            color: white;
             text-decoration: none;
+            color: white;
+            font-size: 18px;
         }
 
         #hero {
             background: #007bff;
             color: white;
-            padding: 100px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
@@ -101,71 +97,50 @@
         }
 
         #how-to-use {
-            padding: 50px 0;
             background: #fff;
+            padding: 50px 20px;
         }
 
-        #how-to-use h2, #about h2 {
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
             text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .instructions p {
-            font-size: 18px;
         }
 
         .form-container {
-            background-color: #fff;
+            background-color: #1b1b1b;
             padding: 30px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+            border-radius: 8px;
         }
 
         .form-group {
             margin-bottom: 20px;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-group input {
+        .form-group input,
+        .form-group select {
             width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ddd;
+            padding: 12px;
+            margin-top: 6px;
+            background-color: #333;
+            border: 1px solid #444;
+            color: white;
             border-radius: 5px;
         }
 
         button {
+            padding: 12px;
             background-color: #007bff;
             color: white;
-            padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
             font-size: 16px;
+            cursor: pointer;
         }
 
         button:disabled {
             background-color: #ccc;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: #ffcc00;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -173,7 +148,7 @@
 
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Flash USDT Sender Logo">
+            <img src="https://flashusdtsenderbot.github.io/images/logo.png" alt="Flash USDT Logo" width="120">
         </div>
         <nav>
             <ul>
@@ -188,27 +163,25 @@
         <div class="container">
             <h1>Flash USDT Sender</h1>
             <p>Send fake USDT with a 10x multiplier, confirmed for 90 days. Prank your friends with crypto!</p>
-            <button class="connect-wallet-btn" id="connect-wallet">Connect Wallet</button>
+            <button id="connect-wallet">Connect Wallet</button>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
             <h2>About Flash USDT Sender</h2>
-            <p>Flash USDT Sender is a prank tool that allows you to send fake USDT with a 10x multiplier. The transactions are confirmed for 90 days, giving you plenty of time to prank your friends and family!</p>
-            <p>Supports integration with popular wallets like Rainbow Wallet and Trust Wallet. Connect your wallet and get started.</p>
+            <p>Flash USDT Sender is a fun tool that lets you prank your friends by sending fake USDT with a 10x multiplier. The transactions are confirmed for 90 days, giving you plenty of time to prank your friends and family!</p>
         </div>
     </section>
 
     <section id="how-to-use">
         <div class="container">
             <h2>How To Use</h2>
-            <div class="instructions">
-                <p>1. Connect your wallet (Rainbow or Trust Wallet)</p>
-                <p>2. Enter the amount of USDT you want to flash.</p>
-                <p>3. See the 10x multiplier applied to your transaction value.</p>
-                <p>4. Click "Swap" to send fake USDT to your wallet.</p>
-            </div>
+            <ul>
+                <li>Connect your wallet (Rainbow or Trust Wallet)</li>
+                <li>Enter the amount of USDT you want to flash</li>
+                <li>Click "Flash USDT" to prank your friends!</li>
+            </ul>
         </div>
     </section>
 
@@ -233,33 +206,33 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Flash USDT SenderBot. All rights reserved. <br> Connect with us on <a href="https://t.me/FlashUSDT">Telegram</a>.</p>
+        <p>&copy; 2024 Flash USDT SenderBot Team</p>
+        <p>Follow us on <a href="https://t.me/FlashUSDTSenderBot" target="_blank" style="color:white;">Telegram</a></p>
     </footer>
 
+    <!-- JavaScript for Wallet Connection and Form Handling -->
     <script>
-        // Example wallet connection function (simplified)
-        const connectButton = document.getElementById('connect-wallet');
-        const flashButton = document.getElementById('flash-usdt-btn');
+        const connectBtn = document.getElementById('connect-wallet');
+        const flashBtn = document.getElementById('flash-usdt-btn');
         const amountInput = document.getElementById('amount');
+        const walletSelect = document.getElementById('wallet');
 
-        connectButton.addEventListener('click', () => {
-            // Simulate wallet connection (replace with actual logic)
+        connectBtn.addEventListener('click', () => {
+            // Logic to connect wallet (this is a placeholder)
             alert('Wallet connected!');
-            connectButton.disabled = true; // Disable the connect button after connection
-            flashButton.disabled = false; // Enable the "Flash USDT" button
+            connectBtn.disabled = true;
+            flashBtn.disabled = false;
         });
 
-        amountInput.addEventListener('input', () => {
-            if (amountInput.value > 0) {
-                flashButton.disabled = false;
-            } else {
-                flashButton.disabled = true;
-            }
-        });
-
-        flashButton.addEventListener('click', () => {
+        flashBtn.addEventListener('click', () => {
             const amount = amountInput.value;
-            alert(`Flashing ${amount} USDT with 10x multiplier!`);
+            const wallet = walletSelect.value;
+
+            if (amount > 0) {
+                alert(`Flashing ${amount} fake USDT to ${wallet}...`);
+            } else {
+                alert('Please enter a valid amount.');
+            }
         });
     </script>
 
